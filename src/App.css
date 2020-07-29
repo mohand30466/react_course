@@ -1,0 +1,32 @@
+
+body{
+    margin: 0;
+    padding: 0;
+}
+.summer{
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    height: 99vh;
+    background-color: bisque;
+}
+.winter{
+    height: 100vh;
+    background-color: cadetblue;
+}
+.rightimg{
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    height: 50px;
+    width: 50px;
+}
+.leftimg{
+    position: absolute;
+    bottom: 15px;
+    right: 5px;
+    height: 50px;
+    width: 50px;
+
+}

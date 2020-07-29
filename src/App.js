@@ -1,25 +1,24 @@
-import React, { Component } from 'react';
-import './App.css';
-import { render } from '@testing-library/react';
+import React from "react";
+import "./App.css";
+import Display from "./component/Display";
 
-class App extends React.Component{
-  state ={lat:null, messages: ''};
+class App extends React.Component {
+  state = { lat: null, messages: "" };
 
   componentDidMount() {
     window.navigator.geolocation.getCurrentPosition(
-     position => this.setState({lat: position.coords.latitude}),
-     err => this.setState({messages:err.message})
-  );
-    }
+      (position) => this.setState({ lat: position.coords.latitude }),
+      (err) => this.setState({ messages: err.message })
+    );
+  }
 
-  render(){
-  
+  render() {
+    return (
+      <div className="App">
+        <Display data={this.state.lat} />
+      </div>
+    );
+  }
+}
 
-  return (
-    <div className="App">
-      <h1>{`hello world here is my latitude ${this.state}`}</h1>
-    </div>
-  );
-}
-}
 export default App;
